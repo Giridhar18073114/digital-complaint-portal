@@ -1,0 +1,97 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gram Panchayat Complaint Portal</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body><h1>Digital Complaint Portal</h1>
+<h2>Gram Panchayat</h2>
+
+<p>Welcome to our Digital Complaint Portal.</p>
+<p>Report local problems and track your complaints easily.</p>
+
+<h3>Common Complaints</h3>
+
+<ul>
+    <li>Water Supply Problems</li>
+    <li>Road Damage</li>
+    <li>Street Light Problems</li>
+    <li>Garbage Collection</li>
+    <li>Drainage Problems</li>
+</ul>
+
+<h3>Register a Complaint</h3>
+
+<form>
+    <label for="name">Citizen Name:</label><br>
+    <input type="text" id="name" name="name"
+           placeholder="Enter your full name" required>
+    <br><br>
+
+```
+<label for="mobile">Mobile Number:</label><br>
+<input
+    type="tel"
+    id="mobile"
+    name="mobile"
+    placeholder="Enter 10-digit mobile number"
+    pattern="[6-9][0-9]{9}"
+    maxlength="10"
+    required
+>
+<br><br>
+<br><br>
+
+<label for="category">Complaint Category:</label><br>
+<select id="category" name="category" required>
+    <option value="">Select a category</option>
+    <option value="water">Water Supply</option>
+    <option value="road">Road Damage</option>
+    <option value="streetlight">Street Light</option>
+    <option value="garbage">Garbage Collection</option>
+    <option value="drainage">Drainage Problem</option>
+    <option value="other">Other</option>
+</select>
+<br><br>
+
+<label for="location">Problem Location:</label><br>
+<input type="text" id="location" name="location"
+       placeholder="Enter village or street" required>
+<br><br>
+
+<label for="description">Complaint Description:</label><br>
+<textarea id="description" name="description"
+          rows="5" placeholder="Describe the problem"
+          required></textarea>
+<br><br>
+
+<button type="submit">Submit Complaint</button>
+```
+
+</form>
+
+<hr>
+
+<section id="tracking-section">
+    <h2>Track Your Complaint</h2>
+
+    <label for="track-id">Enter Complaint ID:</label>
+
+    <input
+        type="number"
+        id="track-id"
+        placeholder="Example: 1"
+        min="1"
+        required
+    >
+
+    <button type="button" id="track-button">
+        Track Complaint
+    </button>
+
+    <div id="tracking-result"></div>
+</section>
+<script src="/static/script.js"></script>
+</body>
+</html>

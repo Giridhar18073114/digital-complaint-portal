@@ -1,0 +1,183 @@
+/* ===== Global Styling ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f2f6fa;
+    color: #263445;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* ===== Main Header ===== */
+h1 {
+    background: linear-gradient(135deg, #123456, #167d75);
+    color: white;
+    text-align: center;
+    padding: 28px 15px;
+    margin: 0;
+    font-size: 32px;
+    letter-spacing: 0.5px;
+}
+
+h2 {
+    color: #123456;
+    text-align: center;
+    margin-top: 25px;
+}
+
+h3 {
+    color: #167d75;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* ===== Welcome Text ===== */
+body > p {
+    text-align: center;
+    color: #526274;
+    font-size: 16px;
+    margin: 8px 15px;
+}
+
+/* ===== Complaint Categories ===== */
+ul {
+    width: min(90%, 600px);
+    margin: 20px auto 35px;
+    padding: 20px 35px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(18, 52, 86, 0.08);
+}
+
+li {
+    padding: 7px 0;
+}
+
+/* ===== Form and Tracking Cards ===== */
+form,
+#tracking-section {
+    width: min(90%, 650px);
+    margin: 20px auto;
+    padding: 28px;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 6px 24px rgba(18, 52, 86, 0.09);
+}
+
+/* ===== Form Labels ===== */
+label {
+    display: inline-block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #263445;
+}
+
+/* ===== Input Fields ===== */
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    margin-top: 4px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font-size: 15px;
+    font-family: inherit;
+    background: #fbfdff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #167d75;
+    box-shadow: 0 0 0 3px rgba(22, 125, 117, 0.13);
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* ===== Buttons ===== */
+button {
+    display: inline-block;
+    background: #167d75;
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    margin-top: 12px;
+}
+
+button:hover {
+    background: #105c56;
+    transform: translateY(-1px);
+}
+
+/* ===== Tracking Section ===== */
+#tracking-section h2 {
+    margin-top: 0;
+}
+
+#tracking-section button {
+    width: 100%;
+    margin-top: 14px;
+}
+
+#tracking-result {
+    margin-top: 20px;
+    overflow-wrap: anywhere;
+}
+
+#tracking-result h3 {
+    text-align: left;
+}
+
+#tracking-result p {
+    padding: 8px 12px;
+    background: #f2f8f7;
+    border-radius: 6px;
+}
+
+/* ===== Divider ===== */
+hr {
+    width: 85%;
+    margin: 40px auto;
+    border: none;
+    border-top: 1px solid #d8e1e9;
+}
+
+/* ===== Mobile Responsive Design ===== */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 25px;
+        padding: 22px 12px;
+    }
+
+    form,
+    #tracking-section {
+        padding: 20px;
+    }
+
+    ul {
+        padding: 18px 28px;
+    }
+
+    button {
+        width: 100%;
+    }
+}

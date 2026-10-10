@@ -1,0 +1,21 @@
+# Python virtual environments
+.venv/
+.venv_new/
+venv/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Local database containing complaint records
+complaints.db
+*.db
+
+# Environment variables and secrets
+.env
+.env.*
+
+# Editor and operating system files
+.vscode/
+.DS_Store
+Thumbs.db
