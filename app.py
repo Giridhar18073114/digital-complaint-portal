@@ -201,10 +201,10 @@ def admin_login_page():
 
 @app.route("/admin-dashboard")
 def admin_dashboard():
+    print("Accessing admin dashboard...")
     if not session.get("admin_logged_in"):
-        return jsonify({
-            "error": "Please log in first"
-        }), 401
+        print("Admin not logged in. Redirecting to login page.")
+        return app.send_static_file("admin.html")
 
     complaints = Complaint.query.order_by(
         Complaint.id.desc()
@@ -446,9 +446,7 @@ def admin_dashboard():
 @app.route("/update-status", methods=["POST"])
 def update_status():
     if not session.get("admin_logged_in"):
-        return jsonify({
-            "error": "Please log in first"
-        }), 401
+        return app.send_static_file("admin.html")
 
     data = request.get_json(silent=True) or {}
 
